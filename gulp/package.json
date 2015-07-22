@@ -1,0 +1,42 @@
+{
+  "name": "gulp-app",
+  "version": "0.0.1",
+  "description": "gulp minimum app",
+  "main": "./gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/micro-gulp.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-shell",
+    "run-sequence"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "run-sequence": "*"
+  },
+  "browser": {
+  },
+  "browserify": [ "js", "jsx" ],
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "preinstall": "npm install -g gulp gulp-shell babel watchify browserify",
+    "start": "NODE_ENV=production NODE_PATH=",
+    "babel": "babel ./ --out-dir ./sample/js --ignore ./sample,./node_modules",
+    "browserify": "browserify -d --compact false ./sample/js/app.js > ./sample/dist/build.js",
+    "build": "npm run babel; npm run browserify"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}

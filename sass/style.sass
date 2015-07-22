@@ -1,0 +1,45 @@
+/*
+  # style.sass
+  importで構成
+  */
+
+
+/*
+  # vendor
+  bourbon, neat, bitters, font-awesomeを読込
+  */
+
+$fa-font-path:       './vendor/font-awesome/fonts'
+
+@import './vendor/bourbon/app/assets/stylesheets/_bourbon.scss'
+@import './vendor/neat/app/assets/stylesheets/_neat.scss'
+@import './vendor/bitters/app/assets/stylesheets/_base.scss'
+@import './vendor/font-awesome/scss/font-awesome.scss'
+@import './vendor/animate.css-scss/animate'
+
+/*
+  # config
+  変数を定義。すべてのファイルで利用
+  */
+
+@import 'config'
+
+/*
+  # lib
+  汎用のライブラリを読込
+  */
+
+@import 'functions/index'
+@import 'mixins/index'
+@import 'motions/index'
+
+/*
+  # rule
+  smaccsをもとに構成  
+  */
+
+@import 'base'
+@import 'layouts/index'
+@import 'modules/index'
+@import 'pages/index'
+@import 'theme'

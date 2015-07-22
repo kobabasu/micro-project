@@ -1,0 +1,36 @@
+{
+  "name": "sass-app",
+  "version": "0.0.1",
+  "description": "sass minimum app",
+  "main": "sample/css/style.css",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/micro-coffee.git"
+  },
+  "keywords": [
+    "sass",
+    "bourbon",
+    "neat",
+    "bitters"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "preinstall": "npm install -g bower styledocco; bower install",
+    "start": "NODE_ENV=production NODE_PATH=",
+    "sass": "sass --no-cache --sourcemap=file ./style.sass:./sample/css/style.css",
+    "watch:sass": "sass --no-cache --sourcemap=file -w ./style.sass:./sample/css/style.css",
+    "doc:sass": "styledocco -n 'css reference' -o docs/sass --preprocessor 'sass' ./*.sass ./**/*.sass",
+    "build": "npm run sass; npm run doc"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}

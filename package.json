@@ -1,0 +1,57 @@
+{
+  "name": "phalcon-rest-app",
+  "version": "0.0.1",
+  "description": "phalcon-rest minimum set",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/phalcon-rest.git"
+  },
+  "keywords": [
+    "es6",
+    "react",
+    "flux",
+    "phalcon",
+    "frisby",
+    "REST",
+    "gulp",
+    "gulp-shell",
+    "run-sequence",
+    "protractor",
+    "e2e"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+    "react": "*",
+    "object-assign": "*",
+    "flux": "*"
+  },
+  "devDependencies": {
+    "frisby": "*",
+    "gulp": "*",
+    "run-sequence": "*",
+    "protractor": "*"
+  },
+  "browser": {
+  },
+  "browserify": [ "js", "jsx" ],
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "preinstall": "npm install -g gulp gulp-shell babel babel-eslint browserify watchify jasmine-node bower styledocco protractor; bower install",
+    "postinstall": "node_modules/protractor/bin/webdriver-manager update",
+    "start": "NODE_ENV=production NODE_PATH=app",
+    "docs": "gulp docs",
+    "test": "gulp test",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "flux-app",
+  "version": "0.0.1",
+  "description": "flux minimum app",
+  "main": "sample/dist/app.js",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/micro-flux.git"
+  },
+  "keywords": [
+    "es6",
+    "react",
+    "flux"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+    "react": "*",
+    "object-assign": "*",
+    "flux": "*"
+  },
+  "devDependencies": {
+  },
+  "browser": {
+  },
+  "browserify": [ "js", "jsx" ],
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "preinstall": "npm install -g babel browserify",
+    "start": "NODE_ENV=production NODE_PATH=js src dist",
+    "babel": "babel ./ --out-dir ./sample/js --ignore ./sample,./node_modules",
+    "browserify": "browserify -d --compact false ./sample/js/app.js > ./sample/dist/build.js",
+    "build": "npm run babel; npm run browserify"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}

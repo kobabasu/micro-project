@@ -1,0 +1,36 @@
+{
+  "name": "protractor-app",
+  "version": "0.0.1",
+  "description": "protractor minimum app",
+  "main": "scenarios/sample_spec.js",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/micro-protractor.git"
+  },
+  "keywords": [
+    "protractor",
+    "e2e"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "protractor": "*"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "preinstall": "npm install -g protractor",
+    "postinstall": "node_modules/protractor/bin/webdriver-manager update",
+    "start": "NODE_ENV=production NODE_PATH=",
+    "test": "protractor"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
+}
