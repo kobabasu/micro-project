@@ -7,6 +7,9 @@ package.json-e
 node_modules
 npm-debug-log
 
+css/*
+js/*
+dist/*
 vendor/*
 
 !.gitkeep
